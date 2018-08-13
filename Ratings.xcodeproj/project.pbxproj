@@ -15,6 +15,8 @@
 		917917D021223D6F008ED14A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917CF21223D6F008ED14A /* main.m */; };
 		917917DA21223D70008ED14A /* RatingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917D921223D70008ED14A /* RatingsTests.m */; };
 		917917E521223D70008ED14A /* RatingsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917E421223D70008ED14A /* RatingsUITests.m */; };
+		917917F421224274008ED14A /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F321224274008ED14A /* PlayersViewController.m */; };
+		917917F7212242CD008ED14A /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F6212242CD008ED14A /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		917917E021223D70008ED14A /* RatingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		917917E421223D70008ED14A /* RatingsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingsUITests.m; sourceTree = "<group>"; };
 		917917E621223D70008ED14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		917917F221224274008ED14A /* PlayersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
+		917917F321224274008ED14A /* PlayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
+		917917F5212242CD008ED14A /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		917917F6212242CD008ED14A /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,10 @@
 				917917C321223D6E008ED14A /* ViewController.h */,
 				917917C421223D6E008ED14A /* ViewController.m */,
 				917917C621223D6E008ED14A /* Main.storyboard */,
+				917917F221224274008ED14A /* PlayersViewController.h */,
+				917917F5212242CD008ED14A /* Player.h */,
+				917917F6212242CD008ED14A /* Player.m */,
+				917917F321224274008ED14A /* PlayersViewController.m */,
 				917917C921223D6F008ED14A /* Assets.xcassets */,
 				917917CB21223D6F008ED14A /* LaunchScreen.storyboard */,
 				917917CE21223D6F008ED14A /* Info.plist */,
@@ -263,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				917917C521223D6E008ED14A /* ViewController.m in Sources */,
+				917917F421224274008ED14A /* PlayersViewController.m in Sources */,
 				917917D021223D6F008ED14A /* main.m in Sources */,
 				917917C221223D6E008ED14A /* AppDelegate.m in Sources */,
+				917917F7212242CD008ED14A /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
