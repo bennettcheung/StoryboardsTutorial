@@ -17,6 +17,7 @@
 		917917E521223D70008ED14A /* RatingsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917E421223D70008ED14A /* RatingsUITests.m */; };
 		917917F421224274008ED14A /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F321224274008ED14A /* PlayersViewController.m */; };
 		917917F7212242CD008ED14A /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F6212242CD008ED14A /* Player.m */; };
+		917917FA21224953008ED14A /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F921224953008ED14A /* PlayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		917917F321224274008ED14A /* PlayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
 		917917F5212242CD008ED14A /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		917917F6212242CD008ED14A /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		917917F821224953008ED14A /* PlayerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		917917F921224953008ED14A /* PlayerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				917917C321223D6E008ED14A /* ViewController.h */,
 				917917C421223D6E008ED14A /* ViewController.m */,
 				917917C621223D6E008ED14A /* Main.storyboard */,
+				917917F821224953008ED14A /* PlayerCell.h */,
+				917917F921224953008ED14A /* PlayerCell.m */,
 				917917F221224274008ED14A /* PlayersViewController.h */,
 				917917F5212242CD008ED14A /* Player.h */,
 				917917F6212242CD008ED14A /* Player.m */,
@@ -276,6 +281,7 @@
 				917917F421224274008ED14A /* PlayersViewController.m in Sources */,
 				917917D021223D6F008ED14A /* main.m in Sources */,
 				917917C221223D6E008ED14A /* AppDelegate.m in Sources */,
+				917917FA21224953008ED14A /* PlayerCell.m in Sources */,
 				917917F7212242CD008ED14A /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
