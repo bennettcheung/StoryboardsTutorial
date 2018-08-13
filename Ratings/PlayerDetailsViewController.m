@@ -7,8 +7,12 @@
 //
 
 #import "PlayerDetailsViewController.h"
+#import "Player.h"
 
 @interface PlayerDetailsViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gameLabel;
 
 @end
 
@@ -30,16 +34,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,6 +94,30 @@
 }
 - (IBAction)done:(id)sender
 {
-    [self.delegate playerDetailsViewControllerDidSave:self];
+    Player *player = [[Player alloc] init];
+    player.name = self.nameTextField.text;
+    player.game = @"Chess";
+    player.rating = 1;
+    [self.delegate playerDetailsViewController:self didAddPlayer:player];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        [self.nameTextField becomeFirstResponder];
+    }
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder])) {
+        NSLog(@"init PlayerDetailsViewController");
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"dealloc PlayerDetailsViewController");
 }
 @end
