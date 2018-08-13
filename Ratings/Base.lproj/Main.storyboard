@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Gestures-->
         <scene sceneID="PuK-pf-XBv">
             <objects>
                 <viewController id="6Ru-YH-uK4" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="z6z-xo-qDl"/>
+                    <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="z6z-xo-qDl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nA9-xP-dF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,11 +120,11 @@
             </objects>
             <point key="canvasLocation" x="74.375" y="132.28833333333333"/>
         </scene>
-        <!--Item-->
+        <!--Players-->
         <scene sceneID="23v-dL-SWB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QuY-Nf-pVZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hFB-A1-M5u"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="Players" id="hFB-A1-M5u"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iag-Eb-khw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -140,4 +140,8 @@
             <point key="canvasLocation" x="-868.5" y="-642.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gestures" width="30" height="30"/>
+        <image name="Players" width="30" height="30"/>
+    </resources>
 </document>
