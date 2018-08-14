@@ -1,36 +1,29 @@
 //
-//  PlayerDetailsViewController.m
+//  GamePickerViewController.m
 //  Ratings
 //
 //  Created by Bennett on 2018-08-13.
 //  Copyright © 2018 Bennett. All rights reserved.
 //
 
-#import "PlayerDetailsViewController.h"
-#import "Player.h"
+#import "GamePickerViewController.h"
 
-@interface PlayerDetailsViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *gameLabel;
-@property (strong, nonatomic) NSString *game;
-
+@interface GamePickerViewController ()
+    @property (nonatomic, strong) NSArray *games;
+    @property (nonatomic, assign) NSUInteger selectedIndex;
 @end
 
-@implementation PlayerDetailsViewController
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    if ((self = [super initWithCoder:aDecoder])) {
-        NSLog(@"init PlayerDetailsViewController");
-        _game = @"Chess";
-    }
-    return self;
-}
+@implementation GamePickerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.detailLabel.text = self.game;
+    _games = @[@"Angry Birds",
+               @"Chess",
+               @"Russian Roulette",
+               @"Spin the Bottle",
+               @"Texas Hold'em Poker",
+               @"Tic-Tac-Toe"];
+    self.selectedIndex = [_games indexOfObject:self.game];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,6 +39,47 @@
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.games count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameCell"];
+    cell.textLabel.text = _games[indexPath.row];
+    
+    if (indexPath.row == _selectedIndex) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (_selectedIndex != NSNotFound) {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:
+                                 [NSIndexPath indexPathForRow:_selectedIndex inSection:0]];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    _selectedIndex = indexPath.row;
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    NSString *game = _games[indexPath.row];
+    [self.delegate gamePickerViewController:self didSelectGame:game];
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
@@ -99,47 +133,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)cancel:(id)sender
-{
-    [self.delegate playerDetailsViewControllerDidCancel:self];
-}
-- (IBAction)done:(id)sender
-{
-    Player *player = [[Player alloc] init];
-    player.name = self.nameTextField.text;
-    player.game = _game;  // only this line is changed
-    player.rating = 1;
-    
-    [self.delegate playerDetailsViewController:self didAddPlayer:player];
-}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        [self.nameTextField becomeFirstResponder];
-    }
-}
-
-
-- (void)dealloc
-{
-    NSLog(@"dealloc PlayerDetailsViewController");
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"PickGame"]) {
-        GamePickerViewController *gamePickerViewController = segue.destinationViewController;
-        gamePickerViewController.delegate = self;
-        gamePickerViewController.game = _game;
-    }
-}
-
-- (void)gamePickerViewController:(GamePickerViewController *)controller didSelectGame:(NSString *)game
-{
-    _game = game;
-    self.detailLabel.text = _game;
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
 @end

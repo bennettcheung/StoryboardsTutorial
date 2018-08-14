@@ -19,6 +19,7 @@
 		917917F7212242CD008ED14A /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F6212242CD008ED14A /* Player.m */; };
 		917917FA21224953008ED14A /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917F921224953008ED14A /* PlayerCell.m */; };
 		917917FD21224BAD008ED14A /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917FC21224BAD008ED14A /* PlayerDetailsViewController.m */; };
+		917918002122539B008ED14A /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 917917FF2122539B008ED14A /* GamePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		917917F921224953008ED14A /* PlayerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		917917FB21224BAD008ED14A /* PlayerDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerDetailsViewController.h; sourceTree = "<group>"; };
 		917917FC21224BAD008ED14A /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
+		917917FE2122539B008ED14A /* GamePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
+		917917FF2122539B008ED14A /* GamePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				917917C321223D6E008ED14A /* ViewController.h */,
 				917917C421223D6E008ED14A /* ViewController.m */,
 				917917C621223D6E008ED14A /* Main.storyboard */,
+				917917FE2122539B008ED14A /* GamePickerViewController.h */,
+				917917FF2122539B008ED14A /* GamePickerViewController.m */,
 				917917FB21224BAD008ED14A /* PlayerDetailsViewController.h */,
 				917917FC21224BAD008ED14A /* PlayerDetailsViewController.m */,
 				917917F821224953008ED14A /* PlayerCell.h */,
@@ -286,6 +291,7 @@
 				917917F421224274008ED14A /* PlayersViewController.m in Sources */,
 				917917D021223D6F008ED14A /* main.m in Sources */,
 				917917C221223D6E008ED14A /* AppDelegate.m in Sources */,
+				917918002122539B008ED14A /* GamePickerViewController.m in Sources */,
 				917917FA21224953008ED14A /* PlayerCell.m in Sources */,
 				917917F7212242CD008ED14A /* Player.m in Sources */,
 				917917FD21224BAD008ED14A /* PlayerDetailsViewController.m in Sources */,
